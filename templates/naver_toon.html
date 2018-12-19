@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        
+        <h1>naver webtoon 모아보기</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>썸네일</th>
+                    <th>웹툰 제목</th>
+                    <th>웹툰 링크</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for toon in t: %}
+                <tr>
+                    <td>
+                        <img src="{{ toon["img_url"] }}">
+                        </img>
+                    </td>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;{{ toon["title"] }}</td>
+                    <td> <a href="{{ toon["url"] }}"> 보러가기</a></td>
+                </tr>
+                {% endfor %}
+
+                
+            </tbody>
+        </table>
+
+    </body>
+</html>
